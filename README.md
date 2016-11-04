@@ -19,3 +19,6 @@ fn2('param1', 'param2');	//param1, param2, fixed
 
 var fn3 = __(fn1)(__, 'fixed', __);
 fn3('param1', 'param2');	//param1, fixed, param2
+
+var fn4 = __(fn1)('fixed1', __, 'fixed2');
+fn3('param');	//fixed1, param, fixed2

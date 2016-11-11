@@ -2,7 +2,7 @@
 /**
  * default.js
  * @Author ---- CJY [375564567@qq.com]
- * @Date ------ 2016.11.05
+ * @Date ------ 2016.11.11
  */
 (function() {
     var root = this;
@@ -22,8 +22,10 @@
         };
     };
     __.__ = true;
-    if (exports !== void 0) {
-        if (module !== void 0 && module.exports) exports = module.exports = __;
+    if (typeof exports !== 'undefined') {
+        if (typeof module !== 'undefined' && module.exports) exports = module.exports = __;
         exports.__ = __;
+    } else if (typeof define !== 'undefined') {
+        define(__);
     } else root.__ = __;
 }.call(this));

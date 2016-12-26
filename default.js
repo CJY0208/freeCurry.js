@@ -14,7 +14,7 @@
                 var _args = slice.call(arguments);
                 return args.map(function(arg) {
                     return arg.__ ? _args.shift() : arg;
-                });
+                }).concat(_args);
             };
             return function() {
                 return _f.apply(this, _$.apply(this, arguments));
